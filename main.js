@@ -96,7 +96,7 @@ function renderNoteList(item) {
 function handleClick(e) {
   const id = e.target.parentElement.dataset.id;
   if (e.target.id === "delete") {
-    notes.filter((note) => note.id != id);
+    notes = notes.filter((note) => note.id != id);
     setStorage(notes);
     renderNoteList(notes);
   }
